@@ -481,4 +481,27 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<p>There are {{components.length}} components in this app.</p>
+<div *ngFor="let name of components; index as i">
+  <div> {{i}} {{name}} </div>
+  <button (click)="changeTitle(name)">Click me</button>
+</div>
+
+<form #nameForm="ngForm" (ngSubmit)="addName(nameForm)">
+  <label for="name">Enter a name!</label>
+ <input name="name" id="name" ngModel />
+ <button>Add to List</button>
+</form>
+
+<div>
+  <form #userNameForm="ngForm" (ngSubmit)="addUserName(userNameForm)">
+    <label for="name">What is your name.</label>
+    <input name="name" id="name" ngModel/>
+    <button>Submit</button>
+  </form>
+</div>
 <router-outlet></router-outlet>
+
+<app-greater name="Samuel"></app-greater>
+<hr>
+<app-greater name="Juliet"></app-greater>
