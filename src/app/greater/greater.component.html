@@ -1,4 +1,9 @@
 <h1>Hello from {{greater}}</h1>
 <p>My favorite number is {{favoriteNumber}}</p>
 
+<button (click)="toggleStory()">{{buttonText}}</button>
+<div *ngIf="showStory">
+    <app-back-story></app-back-story>
+</div>
+
 <app-back-story></app-back-story>

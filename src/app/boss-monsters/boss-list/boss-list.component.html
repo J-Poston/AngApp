@@ -1,0 +1,10 @@
+<h3>Boss List</h3>
+<div *ngFor="let boss of bossMonsters, index as i">
+    <span>{{boss.name}}</span>
+    <li>Health Points: {{boss.healthPoints}}</li>
+    <li>Weakness: {{boss.weakness}}</li>
+    <a [routerLink]="['/boss-details',i]">{{boss.name}}</a>
+    <br>
+</div>
+
+<app-deadliest-boss></app-deadliest-boss>

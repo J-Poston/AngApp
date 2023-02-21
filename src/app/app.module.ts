@@ -6,17 +6,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GreaterComponent } from './greater/greater.component';
 import { BackStoryComponent } from './back-story/back-story.component';
+import { DungeonComponent } from './dungeon/dungeon.component';
+import { BossMonsterComponent } from './boss-monster/boss-monster.component';
+import { BossMonstersModule } from './boss-monsters/boss-monsters.module';
+import { CoreModule } from './core/core.module';
+import { HttpClientModule} from '@angular/common/http';
+import { CharacterClassModule } from './character-class/character-class.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     GreaterComponent,
-    BackStoryComponent
+    BackStoryComponent,
+    DungeonComponent,
+    BossMonsterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    HttpClientModule,
+    FormsModule,
+    BossMonstersModule,
+    CoreModule,
+    CharacterClassModule
   ],
   providers: [],
   bootstrap: [AppComponent]

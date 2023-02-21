@@ -1,0 +1,14 @@
+
+<div>
+    <li *ngFor="let class of characterClasses.results">        
+           <span  style="font-size: 20px;text-align: center;">{{class.index}}  </span>      
+    </li>
+</div>
+
+<div>
+    <h3>Classes</h3>
+    <div *ngFor="let class of characterClasses.results">
+        <h3>{{class.name | uppercase}}</h3>
+        <app-character-class-details index={{class.index}}></app-character-class-details>
+    </div>
+</div>
